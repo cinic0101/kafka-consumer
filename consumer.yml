@@ -1,0 +1,10 @@
+kafka:
+  bootstrap-servers: 192.168.100.1  # Kafka bootstrap servers
+  group-id: es  # Kafka group ID
+  topics: es  # Kafka topics
+
+destination:
+  type: es  # For now, only supports "es", es -> elasticsearch
+  params:
+    server: 192.168.100.2:9300  # Elasticsearch server
+    default-type: default # Because of elasticsearch 6.x breaking changes, only supports 1 type
